@@ -3,7 +3,7 @@
   "context": "..",
   "dockerFile": "../Dockerfile.dev",
   "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && script/setup",
-  "postStartCommand": "script/bootstrap",
+  "postStartCommand": "script/bootstrap && hass -c /workspaces/homeassistant-core/config --port 8124",
   "containerEnv": {
     "PYTHONASYNCIODEBUG": "1"
   },
